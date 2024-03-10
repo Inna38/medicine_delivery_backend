@@ -19,11 +19,7 @@ const orderShema = new Schema(
       require: true,
     },
     order: {
-      type: String,
-      require: true,
-    },
-    pharmacyOrder: {
-      type: String,
+      type: Array,
       require: true,
     },
   },
@@ -64,8 +60,7 @@ const orderSchema = Joi.object({
   email: Joi.string().required(),
   phone: Joi.string().required(),
   address: Joi.string().required(),
-  order: Joi.string().required(),
-  pharmacyOrder: Joi.string().required(),
+  order: Joi.array().required(),
 });
 
 module.exports = {
