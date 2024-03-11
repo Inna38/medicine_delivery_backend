@@ -10,7 +10,7 @@ Server:
 
 https://medicine-delivery-backend-8m18.onrender.com  - API base_URL
 
-https://medicine-delivery-backend-8m18.onrender.com/order - save order 
+https://medicine-delivery-backend-8m18.onrender.com/order - send order
 
 https://medicine-delivery-backend-8m18.onrender.com/id - get medicines
 
