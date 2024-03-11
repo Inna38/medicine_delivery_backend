@@ -22,6 +22,9 @@ const orderShema = new Schema(
       type: Array,
       require: true,
     },
+    coupon: {
+    type: Array,
+  },
   },
 
   { versionKey: false }
@@ -52,8 +55,15 @@ const pharmacyShema = new Schema({
   },
 });
 
+const CouponShema = new Schema({
+  coupon: {
+    type: Array,
+  },
+});
+
 const Order = model("order", orderShema);
 const Pharmacy = model("pharmacy", pharmacyShema);
+const Coupon = model("Coupon", CouponShema);
 
 const orderSchema = Joi.object({
   name: Joi.string().required(),
@@ -61,10 +71,12 @@ const orderSchema = Joi.object({
   phone: Joi.string().required(),
   address: Joi.string().required(),
   order: Joi.array().required(),
+  coupon: Joi.array(),
 });
 
 module.exports = {
   Order,
   Pharmacy,
   orderSchema,
+  Coupon,
 };
