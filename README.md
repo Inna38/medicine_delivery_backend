@@ -6,6 +6,8 @@ Connecting using Node.js
 
 Used Express.js
 
+Application deployment on Render Dashboard
+
 Server:
 
 https://medicine-delivery-backend-8m18.onrender.com  - API base_URL
